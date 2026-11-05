@@ -1,0 +1,64 @@
+@use "../../styles/mixins" as *;
+
+.card {
+  @include card;
+  --tone: var(--green);
+  --tone-soft: var(--green-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.1rem 1.25rem;
+  min-width: 0;
+
+  &[data-tone="blue"] {
+    --tone: var(--blue);
+    --tone-soft: var(--blue-soft);
+  }
+
+  &[data-tone="purple"] {
+    --tone: var(--purple);
+    --tone-soft: var(--purple-soft);
+  }
+
+  &[data-tone="warning"] {
+    --tone: var(--warning);
+    --tone-soft: var(--warning-soft);
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-sm);
+  background: var(--tone-soft);
+  color: var(--tone);
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--tone);
+  line-height: 1.2;
+}
+
+.detail {
+  color: var(--text-subtle);
+  font-size: 0.8rem;
+}

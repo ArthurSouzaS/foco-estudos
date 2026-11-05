@@ -1,0 +1,45 @@
+.figure {
+  margin: 0;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.grid {
+  stroke: var(--border);
+  stroke-dasharray: 3 4;
+}
+
+.axis,
+.label,
+.labelToday {
+  fill: var(--text-subtle);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.label {
+  fill: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 13px;
+}
+
+.labelToday {
+  fill: var(--green);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.bar {
+  stroke: var(--surface);
+  stroke-width: 1;
+}
+
+.empty {
+  fill: var(--surface-3);
+}
