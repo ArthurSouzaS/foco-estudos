@@ -1,0 +1,28 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+}
+
+.icon {
+  font-size: 1.75rem;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.description {
+  max-width: 40ch;
+  color: var(--text-muted);
+  font-size: 0.925rem;
+}
+
+.action {
+  margin-top: 0.75rem;
+}
