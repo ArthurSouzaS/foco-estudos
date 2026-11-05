@@ -1,0 +1,43 @@
+.ring {
+  --ring-color: var(--green);
+  position: relative;
+  width: min(280px, 78vw);
+  aspect-ratio: 1;
+
+  &[data-phase="pausa-curta"] {
+    --ring-color: var(--blue);
+  }
+
+  &[data-phase="pausa-longa"] {
+    --ring-color: var(--purple);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.track {
+  fill: none;
+  stroke: var(--surface-3);
+}
+
+.bar {
+  fill: none;
+  stroke: var(--ring-color);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s linear;
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--ring-color) 45%, transparent));
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-align: center;
+}
